@@ -1,0 +1,19 @@
+
+body{
+		background-color: #ffc107;
+}
+
+.text{
+	font-family: 'Castoro', serif;
+	font-size: 3em;
+	padding-bottom: 1em;
+}
+.author{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: .9em;
+}
+img.mypic{
+	border-radius: 50%;
+	max-width: 100px;
+	height: auto;
+}
