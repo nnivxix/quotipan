@@ -28,18 +28,30 @@ function refresh(){
 
 const screenshotTarget = document.body
 const screenshotBtn = document.querySelector('.screenshot')
-screenshotBtn.onclick = getScreenshot;
 
+screenshotBtn.onclick = getScreenshot;
 function getScreenshot(){
-	html2canvas(screenshotTarget).then((canvas) => {
-		var string = canvas.toDataURL("image/png");
-		var iframe = "<iframe style='background-color: #ffc107;color:dimgrey;' width='100wh' min-height='100vh' src='" + string + "'></iframe>"
-		var x = window.open();
-		x.document.open();
-		x.document.write(iframe);
-		x.document.close();
-    // const base64image = canvas.toDataURL("image/png");
-    // window.location.href = base64image;
-    //referenc https://stackoverflow.com/questions/45493234/jspdf-not-allowed-to-navigate-top-frame-to-data-url
+html2canvas(document.querySelector("#kutipan"), {
+	backgroundColor: '#ffc107',
+  width: 1080,
+  height:1080,
+
+
+}).then(canvas => {
+// console.log(canvas.toDataURL()) for check data img
+
+//buat tag a
+const a = document.createElement('a');
+
+document.body.appendChild(a);
+//masukan tautan ke atribut a yang isinya data img
+a.href = canvas.toDataURL();
+//string acak
+let r = Math.random().toString(36).substring(7);
+a.download = `my-image${r}.jpg`;
+
+//event untuk klik donwload
+a.click()
 });
 }
+

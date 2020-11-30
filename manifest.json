@@ -1,0 +1,30 @@
+{
+  "name": "Qoutipan",
+  "short_name": "Qoutipan",
+  "theme_color": "#ffc107",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/index.html",
+  "icons": [
+  	{
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose":"any maskable"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose":"any maskable"
+        }
+  ]
+}
